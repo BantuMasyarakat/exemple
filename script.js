@@ -16,15 +16,9 @@
 //     });
 // }
 
-function tampil (e){
-    document.querySelector(".hai").innerHTML = e;
-}
-
-let ajax = new XMLHttpRequest();
-ajax.onload = function(){
-    let response = ajax.responseText;
-    tampil(response);
+const ajax = new XMLHttpRequest();
+ajax.onreadystatechange = function () {
+    document.querySelector(".display").innerHTML = ajax.responseText;
 };
-
-ajax.open("GET", "ajax/ajax.html");
+ajax.open("get", "ajax/mentah.html");
 ajax.send();
