@@ -10,7 +10,6 @@
 }
 
 .hero {
-    height: 100vh;
     background-image: url("img/hero.png");
     background-position: center;
     background-size: cover;
@@ -36,10 +35,18 @@
 }
 
 .tentang {
-    height: 90vh;
     background-image: url("img/tentang.png");
     background-position: center;
     background-size: cover;
+    font-family: "Heavitas", sans-serif;
+}
+
+.tentang h2 {
+    color: white;
+}
+
+.tentang span {
+    color: rgb(88, 177, 0);
 }
 
 .testimoni {
@@ -130,6 +137,51 @@ footer {
     .nav-item a {
         border: none !important;
     }
+
+    .hero h4 {
+        font-size: 1.9rem !important;
+        text-align: center;
+    }
+
+    .hero p {
+        font-size: 0.9rem !important;
+        text-align: center;
+    }
+
+    .hero .col-md-7 {
+        display: grid;
+        padding: 2.6rem;
+    }
+
+    .hero .col-md-7 img {
+        display: block;
+        margin: auto;
+    }
+
+    .hero .col-md-7 button {
+        height: 2.6rem;
+    }
+
+    .hero .col-md-5 img {
+        display: none;
+    }
+
+    .hero .row {
+        height: 70vh !important;
+    }
+
+    .tentang .col-sm-6 {
+        padding: 0 2.6rem;
+    }
+
+    .katalog {
+        padding: 0 2.4rem;
+    }
+
+    .kadang {
+        display: none;
+    }
+
     #menu {
         transform: translateX(0) !important;
     }
