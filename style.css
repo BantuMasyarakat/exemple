@@ -1,10 +1,6 @@
 @import url("http://fonts.cdnfonts.com/css/heavitas");
 @import url("http://fonts.cdnfonts.com/css/hero-new");
 
-body {
-    background-color: rgb(223, 223, 223) !important;
-}
-
 .navbar {
     font-family: "Heavitas", sans-serif;
 }
@@ -27,7 +23,7 @@ body {
 
 .katalog {
     font-family: "Heavitas", sans-serif;
-    background-color: rgb(223, 223, 223);
+    background-color: rgb(255, 255, 255);
     min-height: 100vh;
 }
 
@@ -36,7 +32,7 @@ body {
 }
 
 .katalog span {
-    color: rgb(107, 214, 0);
+    color: rgb(88, 177, 0);
 }
 
 .tentang {
@@ -96,7 +92,7 @@ footer {
 .katal3 {
     width: 16rem;
     height: 4rem;
-    background-color: rgb(223, 223, 223);
+    background-color: rgb(255, 255, 255);
     border: 3px solid rgb(0, 95, 0);
     cursor: pointer;
     user-select: none;
