@@ -21,18 +21,18 @@ const kering = document.querySelector(".katal2");
 const bubuk = document.querySelector(".katal3");
 
 // default page
-const ajax = new XMLHttpRequest();
-ajax.onreadystatechange = function () {
-    document.querySelector(".display").innerHTML = ajax.responseText;
-    console.log(ajax.responseText);
+window.onload = function () {
+    const ajax = new XMLHttpRequest();
+    ajax.onreadystatechange = function () {
+        document.querySelector(".display").innerHTML = ajax.responseText;
+    };
+    ajax.open("get", "ajax/mentah.html");
+    ajax.send();
+
+    mentah.classList.add("aktif");
+    kering.classList.remove("aktif");
+    bubuk.classList.remove("aktif");
 };
-ajax.open("get", "ajax/mentah.html");
-ajax.send();
-
-mentah.classList.add("aktif");
-kering.classList.remove("aktif");
-bubuk.classList.remove("aktif");
-
 // mentah page
 
 mentah.addEventListener("click", () => {
