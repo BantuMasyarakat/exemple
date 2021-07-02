@@ -16,9 +16,62 @@
 //     });
 // }
 
+const mentah = document.querySelector(".katal1");
+const kering = document.querySelector(".katal2");
+const bubuk = document.querySelector(".katal3");
+
+// default page
 const ajax = new XMLHttpRequest();
 ajax.onreadystatechange = function () {
     document.querySelector(".display").innerHTML = ajax.responseText;
+    console.log(ajax.responseText);
 };
 ajax.open("get", "ajax/mentah.html");
 ajax.send();
+
+mentah.classList.add("aktif");
+kering.classList.remove("aktif");
+bubuk.classList.remove("aktif");
+
+// mentah page
+
+mentah.addEventListener("click", () => {
+    const ajax = new XMLHttpRequest();
+    ajax.onreadystatechange = function () {
+        document.querySelector(".display").innerHTML = ajax.responseText;
+    };
+    ajax.open("get", "ajax/mentah.html");
+    ajax.send();
+
+    kering.classList.remove("aktif");
+    bubuk.classList.remove("aktif");
+    mentah.classList.add("aktif");
+});
+
+// kering page
+kering.addEventListener("click", () => {
+    const ajax = new XMLHttpRequest();
+    ajax.onreadystatechange = function () {
+        document.querySelector(".display").innerHTML = ajax.responseText;
+    };
+    ajax.open("get", "ajax/kering.html");
+    ajax.send();
+
+    kering.classList.add("aktif");
+    bubuk.classList.remove("aktif");
+    mentah.classList.remove("aktif");
+});
+
+// bubuk page
+bubuk.addEventListener("click", () => {
+    const ajax = new XMLHttpRequest();
+    ajax.onreadystatechange = function () {
+        document.querySelector(".display").innerHTML = ajax.responseText;
+    };
+    ajax.open("get", "ajax/bubuk.html");
+    ajax.send();
+
+    kering.classList.remove("aktif");
+    bubuk.classList.add("aktif");
+    mentah.classList.remove("aktif");
+});
