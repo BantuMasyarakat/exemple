@@ -6,12 +6,287 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Document</title>
         <link rel="stylesheet" href="bootstrap/css/bootstrap.css" />
-        <link rel="stylesheet" href="style.css" />
+        <style>
+            @import url("http://fonts.cdnfonts.com/css/heavitas");
+            @import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
+
+            .navbar {
+                font-family: "Heavitas", sans-serif;
+            }
+
+            .nav-item {
+                font-size: 0.7rem;
+            }
+
+            .hero {
+                background-image: url("img/hero.jpg");
+                background-position: center;
+                background-size: cover;
+                color: white;
+            }
+
+            .heroP {
+                font-family: "Righteous", cursive;
+                text-shadow: 5px 5px 7px black;
+            }
+
+            .katalog {
+                font-family: "Heavitas", sans-serif;
+                background-color: rgb(255, 255, 255);
+                min-height: 100vh;
+            }
+
+            .katalog h2 {
+                color: rgb(0, 85, 0);
+            }
+
+            .katalog span {
+                color: rgb(88, 177, 0);
+            }
+
+            .tentang {
+                background-image: url("img/hero.jpg");
+                background-position: center;
+                background-size: cover;
+                font-family: "Heavitas", sans-serif;
+            }
+
+            .tentang h2 {
+                color: white;
+                text-shadow: 5px 5px 7px black;
+            }
+
+            .tentang span {
+                color: rgb(88, 177, 0);
+            }
+
+            .testimoni {
+                background-image: url("img/hero.jpg");
+                background-position: center;
+                background-size: cover;
+            }
+
+            footer {
+                min-height: 40vh;
+                background-color: rgb(1, 26, 0);
+                font-family: "Heavitas", sans-serif;
+                color: white;
+            }
+
+            footer #row {
+                height: 20vh;
+            }
+
+            footer span {
+                color: rgb(88, 177, 0);
+            }
+
+            footer svg {
+                width: 1.9rem;
+                height: 1.9rem;
+                margin: 0 2rem;
+            }
+
+            .col-md-5 img {
+                width: 18rem;
+                display: block;
+                margin: auto;
+                border: 10px solid white;
+            }
+
+            .copy {
+                width: 100%;
+                height: 4vh;
+                background-color: black;
+            }
+
+            .hero h4 {
+                font-family: "Heavitas", sans-serif;
+                text-shadow: 5px 5px 7px black;
+            }
+
+            .col-md-7 img {
+                display: block;
+                width: 100px;
+            }
+
+            .col-md-7 button {
+                color: white;
+                font-size: 0.8rem;
+                font-family: "Heavitas", sans-serif;
+                background-image: linear-gradient(to right, rgb(0, 250, 0), rgb(0, 110, 0), rgb(0, 250, 0));
+                box-shadow: 5px 5px 7px black;
+            }
+
+            .katal1,
+            .katal2,
+            .katal3 {
+                width: 16rem;
+                height: 4rem;
+                background-color: rgb(255, 255, 255);
+                border: 3px solid rgb(0, 95, 0);
+                cursor: pointer;
+                user-select: none;
+            }
+
+            .katal1 h4,
+            .katal2 h4,
+            .katal3 h4 {
+                color: rgb(0, 95, 0);
+                line-height: 4rem;
+            }
+
+            .display {
+                transition: cubic-bezier(0.215, 0.61, 0.355, 1) 1s;
+            }
+
+            .aktif {
+                background-color: rgb(0, 95, 0);
+            }
+
+            .aktif h4 {
+                color: white;
+            }
+
+            .direct h1 {
+                color: rgb(0, 95, 0);
+                font-size: 3rem;
+                font-family: "Righteous", cursive;
+            }
+
+            #navbarDropdownMenuLink {
+                color: rgb(0, 0, 0);
+            }
+
+            #menu {
+                font-family: "Righteous", cursive;
+                transform: translateX(-40px) !important;
+            }
+
+            #test {
+                width: 100%;
+                height: 15rem;
+                background-color: white;
+                margin: 0 0 3rem 0;
+            }
+
+            #testi {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+            }
+
+            #dirBtn {
+                width: 20%;
+                height: 3rem;
+                color: white;
+                font-size: 0.8rem;
+                font-family: "Heavitas", sans-serif;
+                background-image: linear-gradient(to right, rgb(0, 250, 0), rgb(0, 110, 0), rgb(0, 250, 0));
+                box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.637);
+            }
+
+            @media only screen and (max-width: 960px) {
+                .nav-item a {
+                    border: none !important;
+                }
+
+                .hero h4 {
+                    font-size: 1.9rem !important;
+                    text-align: center;
+                }
+
+                .hero p {
+                    font-size: 0.9rem !important;
+                    text-align: center;
+                }
+
+                .hero .col-md-7 {
+                    display: grid;
+                    padding: 2.6rem;
+                }
+
+                .hero .col-md-7 img {
+                    display: block;
+                    margin: auto;
+                }
+
+                .hero .col-md-7 button {
+                    height: 2.6rem;
+                }
+
+                .hero .col-md-5 img {
+                    display: none;
+                }
+
+                .hero .row {
+                    height: 70vh !important;
+                }
+
+                .tentang .col-lg-6 {
+                    padding: 0 2.6rem;
+                }
+
+                .katalog {
+                    padding: 0 2.4rem;
+                }
+
+                .kadang {
+                    display: none;
+                }
+
+                .direct {
+                    padding: 0 2.6rem;
+                }
+
+                .direct .col-12 h1 {
+                    font-size: 2rem;
+                    text-align: center;
+                    font-weight: bolder;
+                }
+
+                .direct .row button {
+                    width: 90% !important;
+                    height: 3rem !important;
+                    font-size: 0.6rem !important;
+                }
+
+                .direct .container-lg {
+                    min-height: 50vh !important;
+                }
+
+                footer {
+                    min-height: 20vh !important;
+                }
+
+                footer h5 {
+                    font-size: 0.9rem;
+                }
+
+                footer svg {
+                    width: 1.5rem;
+                    height: 1.5rem;
+                    margin: 0 0.7rem;
+                }
+
+                footer #row {
+                    height: 10vh;
+                }
+
+                #menu {
+                    transform: translateX(0) !important;
+                }
+
+                #testi {
+                    padding: 0 2.6rem;
+                }
+            }
+        </style>
     </head>
     <body>
         <!-- ini navbar -->
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container-sm">
+            <div class="container-lg">
                 <a class="navbar-brand" href="#">Navbar</a>
                 <button
                     class="navbar-toggler"
@@ -27,22 +302,39 @@
                 <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link active py-1" aria-current="page" href="#" style="color: rgb(0, 110, 0) !important"
+                            <a
+                                class="nav-link active py-1"
+                                aria-current="page"
+                                href="#"
+                                style="color: rgb(0, 110, 0) !important"
+                                id="katTog"
                                 >katalog produk</a
                             >
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link border-start border-3 border-danger py-1" href="#" style="color: rgb(0, 110, 0) !important"
+                            <a
+                                class="nav-link border-start border-3 border-danger py-1"
+                                href="#"
+                                style="color: rgb(0, 110, 0) !important"
+                                id="tenTog"
                                 >tentang kami</a
                             >
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link border-start border-3 border-danger py-1" href="#" style="color: rgb(0, 110, 0) !important"
+                            <a
+                                class="nav-link border-start border-3 border-danger py-1"
+                                href="#"
+                                style="color: rgb(0, 110, 0) !important"
+                                id="tesTog"
                                 >testimoni</a
                             >
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link border-start border-3 border-danger py-1" href="#" style="color: rgb(0, 110, 0) !important"
+                            <a
+                                class="nav-link border-start border-3 border-danger py-1"
+                                href="#"
+                                style="color: rgb(0, 110, 0) !important"
+                                id="manTog"
                                 >manfaat</a
                             >
                         </li>
@@ -70,7 +362,7 @@
         <!-- hero section -->
 
         <section class="hero">
-            <div class="container-sm">
+            <div class="container-lg">
                 <div class="row align-content-center" style="height: 100vh">
                     <div class="col-md-7">
                         <h4 class="fs-1">
@@ -93,8 +385,8 @@
         <!-- akhir hero section -->
 
         <!-- katalog produk -->
-        <section class="katalog">
-            <div class="container-sm" style="min-height: 100vh">
+        <section class="katalog" id="katalog">
+            <div class="container-lg" style="min-height: 100vh">
                 <div class="row mt-4 justify-content-center">
                     <div class="row">
                         <div class="col-12 text-center">
@@ -102,33 +394,35 @@
                         </div>
                     </div>
                     <div class="row mt-5">
-                        <div class="col-sm-4 mb-3 d-grid justify-content-center">
+                        <div class="col-lg-4 mb-3 d-grid justify-content-center">
                             <div class="katal1 text-center"><h4>mentah</h4></div>
                         </div>
-                        <div class="col-sm-4 mb-3 d-grid justify-content-center">
+                        <div class="col-lg-4 mb-3 d-grid justify-content-center">
                             <div class="katal2 text-center"><h4>kering</h4></div>
                         </div>
-                        <div class="col-sm-4 mb-3 d-grid justify-content-center">
+                        <div class="col-lg-4 mb-3 d-grid justify-content-center">
                             <div class="katal3 text-center"><h4>bubuk</h4></div>
                         </div>
                     </div>
                 </div>
+                <!-- ajax here -->
                 <div class="row mt-5 display"></div>
+                <!-- ajax end here -->
             </div>
         </section>
         <!-- akhir katalog produk -->
 
         <!-- tentang kami -->
-        <section class="tentang">
-            <div class="container-sm">
+        <section class="tentang" id="tentang">
+            <div class="container-lg">
                 <div class="row">
                     <div class="col-12 text-center">
                         <h2 class="mt-4 mb-5">Tentang <span>Kami</span></h2>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-sm-6">
-                        <p class="text-light mb-5" style="font-family: 'Hero New', sans-serif">
+                    <div class="col-lg-6">
+                        <p class="text-light mb-5" style="font-family: 'Righteous', cursive; text-shadow: 5px 5px 7px black">
                             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quae accusamus, maiores, earum, consequatur quaerat
                             dicta saepe ducimus doloribus amet nulla pariatur incidunt magni nam ullam vel aut libero totam similique! Lorem
                             ipsum dolor, sit amet consectetur adipisicing elit. Minus explicabo commodi delectus necessitatibus praesentium!
@@ -136,8 +430,8 @@
                             ratione lore
                         </p>
                     </div>
-                    <div class="col-sm-6">
-                        <p class="text-light mb-5 kadang" style="font-family: 'Hero New', sans-serif">
+                    <div class="col-lg-6">
+                        <p class="text-light mb-5 kadang" style="font-family: 'Righteous', cursive; text-shadow: 5px 5px 7px black">
                             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quae accusamus, maiores, earum, consequatur quaerat
                             dicta saepe ducimus doloribus amet nulla pariatur incidunt magni nam ullam vel aut libero totam similique! Lorem
                             ipsum dolor, sit amet consectetur adipisicing elit. Minus explicabo commodi delectus necessitatibus praesentium!
@@ -151,32 +445,32 @@
         <!-- akhir tentang kami -->
 
         <!-- manfaat -->
-        <section class="katalog">
-            <div class="container-sm">
+        <section class="katalog" id="manfaat">
+            <div class="container-lg">
                 <div class="row">
                     <div class="col-12 text-center">
                         <h2 class="mt-4 mb-4">Manfaat Belanja <span> di toko kami</span></h2>
                     </div>
                 </div>
                 <div class="row mt-5 mb-5">
-                    <div class="col-sm-4 d-grid justify-content-center mb-5">
-                        <div class="card shadow" style="width: 18rem">
+                    <div class="col-lg-4 d-grid justify-content-center mb-5">
+                        <div class="card" style="width: 18rem; box-shadow: 5px 5px 20px black">
                             <img src="img/money.png" class="card-img-top p-5" alt="..." />
                             <div class="card-body text-center py-4">
                                 <p class="card-text">Mendapat barang berkualitas dengan harga murah</p>
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-4 d-grid justify-content-center mb-5">
-                        <div class="card shadow" style="width: 18rem">
+                    <div class="col-lg-4 d-grid justify-content-center mb-5">
+                        <div class="card" style="width: 18rem; box-shadow: 5px 5px 20px black">
                             <img src="img/farmer.png" class="card-img-top p-5" alt="..." />
                             <div class="card-body text-center py-4">
                                 <p class="card-text">Mendukung para petani dalam negri</p>
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-4 d-grid justify-content-center mb-5">
-                        <div class="card shadow" style="width: 18rem">
+                    <div class="col-lg-4 d-grid justify-content-center mb-5">
+                        <div class="card" style="width: 18rem; box-shadow: 5px 5px 20px black">
                             <img src="img/flag.png" class="card-img-top p-5" alt="..." />
                             <div class="card-body text-center py-4">
                                 <p class="card-text">Sebagai bentuk cinta produk dalam negri</p>
@@ -189,42 +483,97 @@
         <!-- akhir manfaat -->
 
         <!-- testimoni -->
-        <section class="testimoni">
-            <div class="container-sm"></div>
+        <section class="testimoni" id="testimoni">
+            <div class="container-lg">
+                <div class="row">
+                    <div class="col-12 text-center mt-4 mb-5">
+                        <h2 style="color: white; font-family: 'Heavitas', sans-serif">Testimoni</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12" style="min-height: 100vh" id="testi">
+                        <div id="test"></div>
+                        <div id="test"></div>
+                        <div id="test"></div>
+                    </div>
+                </div>
+            </div>
         </section>
         <!-- akhir testimoni -->
 
         <!-- direct sell -->
         <div class="direct">
-            <div class="container-sm"></div>
+            <div class="container-lg d-grid align-content-center justify-content-center" style="min-height: 80vh">
+                <div class="row">
+                    <div class="col-12"><h1>Udah gak usah ragu, pesan aja dulu!</h1></div>
+                </div>
+                <div class="row">
+                    <button class="btn mt-5 d-block m-auto" id="dirBtn">Pesan Sekarang!</button>
+                </div>
+            </div>
         </div>
         <!-- akhir direct sell -->
 
         <!-- footer -->
         <footer class="position-relative">
-            <div class="container-sm"></div>
-            <div class="copy position-absolute bottom-0"></div>
+            <div class="container-lg">
+                <div class="row">
+                    <div class="col-12 mt-3">
+                        <h5 class="text-center">Ikuti Media <span>Sosial Kami</span></h5>
+                    </div>
+                </div>
+                <div class="row d-grid align-content-center text-center" id="row">
+                    <div class="col-12">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            fill="currentColor"
+                            class="bi bi-facebook"
+                            viewBox="0 0 16 16"
+                        >
+                            <path
+                                d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"
+                            />
+                        </svg>
+
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            fill="currentColor"
+                            class="bi bi-instagram"
+                            viewBox="0 0 16 16"
+                        >
+                            <path
+                                d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"
+                            />
+                        </svg>
+
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="16"
+                            height="16"
+                            fill="currentColor"
+                            class="bi bi-twitter"
+                            viewBox="0 0 16 16"
+                        >
+                            <path
+                                d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"
+                            />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="copy position-absolute bottom-0 text-center text-light"
+                style="font-size: 0.6rem !important; font-family: 'Righteous', cursive; line-height: 4vh"
+            >
+                <p>&copy; Copyright 2021 | by Mukhamad Khusaini. All right reserved</p>
+            </div>
         </footer>
         <!-- akhir footer -->
         <script src="bootstrap/js/bootstrap.js"></script>
         <script src="script.js"></script>
-
-        <div class="modal" tabindex="-1">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title">Modal title</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <p>Modal body text goes here.</p>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Save changes</button>
-                    </div>
-                </div>
-            </div>
-        </div>
     </body>
 </html>

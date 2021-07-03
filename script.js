@@ -75,3 +75,38 @@ bubuk.addEventListener("click", () => {
     bubuk.classList.add("aktif");
     mentah.classList.remove("aktif");
 });
+
+// scroll script
+const [katTog, tenTog, manTog, tesTog] = [
+    document.querySelector("#katTog"),
+    document.querySelector("#tenTog"),
+    document.querySelector("#manTog"),
+    document.querySelector("#tesTog"),
+];
+
+const tentang = document.querySelector("#tentang");
+const katalog = document.querySelector("#katalog");
+const testimoni = document.querySelector("#testimoni");
+const manfaat = document.querySelector("#manfaat");
+
+katTog.addEventListener("click", (e) => {
+    e.preventDefault;
+    document.documentElement.scrollTop = katalog.offsetTop;
+});
+
+tenTog.addEventListener("click", (e) => {
+    e.preventDefault;
+    document.documentElement.scrollTop = tentang.offsetTop;
+});
+
+manTog.addEventListener("click", (e) => {
+    e.preventDefault;
+    document.documentElement.scrollTop = manfaat.offsetTop;
+});
+
+tesTog.addEventListener("click", (e) => {
+    e.preventDefault;
+    document.documentElement.scrollTop = testimoni.offsetTop;
+});
+
+// script bahasa
