@@ -156,6 +156,10 @@
                 font-family: "Righteous", cursive;
             }
 
+            img.rounded-circle {
+                box-shadow: 0 0 20px black;
+            }
+
             #navbarDropdownMenuLink {
                 color: rgb(0, 0, 0);
             }
@@ -304,45 +308,58 @@
                 <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a
-                                class="nav-link active py-1"
-                                aria-current="page"
-                                href="#"
-                                style="color: rgb(0, 110, 0) !important"
-                                id="katTog"
+                            <a class="katTog nav-link active py-1 ind" aria-current="page" href="#" style="color: rgb(0, 110, 0) !important"
                                 >katalog produk</a
                             >
+                            <a class="katTog nav-link active py-1 eng" aria-current="page" href="#" style="color: rgb(0, 110, 0) !important"
+                                >product catalog</a
+                            >
                         </li>
                         <li class="nav-item">
                             <a
-                                class="nav-link border-start border-3 border-danger py-1"
+                                class="tenTog nav-link border-start border-3 border-danger py-1 ind"
                                 href="#"
                                 style="color: rgb(0, 110, 0) !important"
-                                id="tenTog"
                                 >tentang kami</a
                             >
-                        </li>
-                        <li class="nav-item">
                             <a
-                                class="nav-link border-start border-3 border-danger py-1"
+                                class="tenTog nav-link border-start border-3 border-danger py-1 eng"
                                 href="#"
                                 style="color: rgb(0, 110, 0) !important"
-                                id="tesTog"
-                                >testimoni</a
+                                >about us</a
                             >
                         </li>
                         <li class="nav-item">
                             <a
-                                class="nav-link border-start border-3 border-danger py-1"
+                                class="manTog nav-link border-start border-3 border-danger py-1 ind"
                                 href="#"
                                 style="color: rgb(0, 110, 0) !important"
-                                id="manTog"
                                 >manfaat</a
+                            >
+                            <a
+                                class="manTog nav-link border-start border-3 border-danger py-1 eng"
+                                href="#"
+                                style="color: rgb(0, 110, 0) !important"
+                                >benefits</a
+                            >
+                        </li>
+                        <li class="nav-item">
+                            <a
+                                class="tesTog nav-link border-start border-3 border-danger py-1 ind"
+                                href="#"
+                                style="color: rgb(0, 110, 0) !important"
+                                >testimoni</a
+                            >
+                            <a
+                                class="tesTog nav-link border-start border-3 border-danger py-1 eng"
+                                href="#"
+                                style="color: rgb(0, 110, 0) !important"
+                                >testimonial</a
                             >
                         </li>
                         <li class="nav-item dropdown">
                             <a
-                                class="nav-link dropdown-toggle border-start border-3 border-danger py-1"
+                                class="nav-link dropdown-toggle border-start border-3 border-danger py-1 ind"
                                 href="#"
                                 id="navbarDropdownMenuLink"
                                 role="button"
@@ -350,9 +367,18 @@
                                 aria-expanded="false"
                                 >bahasa</a
                             >
+                            <a
+                                class="nav-link dropdown-toggle border-start border-3 border-danger py-1 eng"
+                                href="#"
+                                id="navbarDropdownMenuLink"
+                                role="button"
+                                data-bs-toggle="dropdown"
+                                aria-expanded="false"
+                                >language</a
+                            >
                             <ul id="menu" class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <li><a class="dropdown-item" href="#">Indonesia</a></li>
-                                <li><a class="dropdown-item" href="#">Inggris</a></li>
+                                <li><a class="dropdown-item" href="#" id="indonesia">Indonesia</a></li>
+                                <li><a class="dropdown-item" href="#" id="inggris">Inggris</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -367,16 +393,24 @@
             <div class="container-lg">
                 <div class="row align-content-center" style="height: 100vh">
                     <div class="col-md-7">
-                        <h4 class="fs-1">
-                            beli rempah-rempah<br />
-                            mudah hanya dari rumah
+                        <h4 class="fs-1 ind">
+                            Penuhi kebutuhan anda <br />
+                            dengan produk berkualitas
                         </h4>
-                        <p class="heroP">
+                        <h4 class="fs-1 eng">
+                            Meet your needs <br />
+                            with quality products
+                        </h4>
+                        <p class="heroP ind">
                             Kami menyediakan berbagai rempah-rempah asli Indonesia yang dipanen oleh petani profesional untuk keperluan anda
                             sehari-hari.
                         </p>
+                        <p class="heroP eng">
+                            We provide a variety of native Indonesian spices harvested by professional farmers for your needs daily.
+                        </p>
                         <img src="img/icon.png" alt="" />
-                        <button class="btn mt-3">Pesan Sekarang!</button>
+                        <button class="btn mt-3 ind">Pesan Sekarang!</button>
+                        <button class="btn mt-3 eng">Shop Now!</button>
                     </div>
                     <div class="col-md-5">
                         <img class="rounded-circle" src="img/produk.png" />
@@ -391,19 +425,25 @@
             <div class="container-lg" style="min-height: 100vh">
                 <div class="row mt-4 justify-content-center">
                     <div class="row">
-                        <div class="col-12 text-center">
+                        <div class="col-12 text-center ind">
                             <h2>Katalog <span>produk</span></h2>
+                        </div>
+                        <div class="col-12 text-center eng">
+                            <h2>product <span>catalog</span></h2>
                         </div>
                     </div>
                     <div class="row mt-5">
                         <div class="col-lg-4 mb-3 d-grid justify-content-center">
-                            <div class="katal1 text-center"><h4>mentah</h4></div>
+                            <div class="katal1 text-center ind"><h4>mentah</h4></div>
+                            <div class="katal1 text-center eng"><h4>raw</h4></div>
                         </div>
                         <div class="col-lg-4 mb-3 d-grid justify-content-center">
-                            <div class="katal2 text-center"><h4>kering</h4></div>
+                            <div class="katal2 text-center ind"><h4>kering</h4></div>
+                            <div class="katal2 text-center eng"><h4>dry</h4></div>
                         </div>
                         <div class="col-lg-4 mb-3 d-grid justify-content-center">
-                            <div class="katal3 text-center"><h4>bubuk</h4></div>
+                            <div class="katal3 text-center ind"><h4>bubuk</h4></div>
+                            <div class="katal3 text-center eng"><h4>powder</h4></div>
                         </div>
                     </div>
                 </div>
@@ -418,27 +458,36 @@
         <section class="tentang" id="tentang">
             <div class="container-lg">
                 <div class="row">
-                    <div class="col-12 text-center">
+                    <div class="col-12 text-center ind">
                         <h2 class="mt-4 mb-5">Tentang <span>Kami</span></h2>
+                    </div>
+                    <div class="col-12 text-center eng">
+                        <h2 class="mt-4 mb-5">about <span>us</span></h2>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-lg-6">
-                        <p class="text-light mb-5" style="font-family: 'Righteous', cursive; text-shadow: 5px 5px 7px black">
-                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quae accusamus, maiores, earum, consequatur quaerat
-                            dicta saepe ducimus doloribus amet nulla pariatur incidunt magni nam ullam vel aut libero totam similique! Lorem
-                            ipsum dolor, sit amet consectetur adipisicing elit. Minus explicabo commodi delectus necessitatibus praesentium!
-                            Tempora tenetur laboriosam sapiente excepturi dolore quisquam corporis alias quaerat, eveniet sit quos porro
-                            ratione lore
+                        <p class="text-light mb-5 ind" style="font-family: 'Righteous', cursive; text-shadow: 5px 5px 7px black">
+                            PT Garda Agro Petani Industri ( PT GAPI ) adalah perusahaan perdagangan komoditas pertanian. Perusahaan kami
+                            berlokasi di Cianjur, Jawa Barat. Kami berdiri sejak tahun 2020. Mengikuti Pertumbuhan dan permintaan komoditas,
+                            kami fokus pada perdagangan rempah-rempah Indonesia.
+                        </p>
+                        <p class="text-light mb-5 eng" style="font-family: 'Righteous', cursive; text-shadow: 5px 5px 7px black">
+                            PT Garda Agro Petani Industri ( PT GAPI ) is an agricultural commodity trading company. Our company located in
+                            Cianjur, West Java. We were founded in 2020. Following the growth and demand for commodities, we focus on the
+                            Indonesian spice trade.
                         </p>
                     </div>
                     <div class="col-lg-6">
-                        <p class="text-light mb-5 kadang" style="font-family: 'Righteous', cursive; text-shadow: 5px 5px 7px black">
-                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quae accusamus, maiores, earum, consequatur quaerat
-                            dicta saepe ducimus doloribus amet nulla pariatur incidunt magni nam ullam vel aut libero totam similique! Lorem
-                            ipsum dolor, sit amet consectetur adipisicing elit. Minus explicabo commodi delectus necessitatibus praesentium!
-                            Tempora tenetur laboriosam sapiente excepturi dolore quisquam corporis alias quaerat, eveniet sit quos porro
-                            ratione amet.
+                        <p class="text-light mb-5 kadang ind" style="font-family: 'Righteous', cursive; text-shadow: 5px 5px 7px black">
+                            Sebagai pemasok bahan baku untuk industri makanan, kami menyesuaikan dengan kebutuhan pelanggan. Produk yang
+                            kami sediakan adalah bahan baku segar, produk kering, atau bubuk. Pasar kami tidak hanya domestik, kami
+                            kembangkan ke pasar ekspor. Dengan demikian kualitas produk yang kami sediakan telah memenuhi kualitas ekspor.
+                        </p>
+                        <p class="text-light mb-5 kadang eng" style="font-family: 'Righteous', cursive; text-shadow: 5px 5px 7px black">
+                            As a supplier of raw materials for the food industry, we adapt to customer needs. Products that we provide is
+                            fresh raw material, dry product, or powder. Our market is not only domestic, we expand to export market. Thus
+                            the quality of the products we provide has met export quality.
                         </p>
                     </div>
                 </div>
@@ -451,7 +500,8 @@
             <div class="container-lg">
                 <div class="row">
                     <div class="col-12 text-center">
-                        <h2 class="mt-4 mb-4">Manfaat Belanja <span> di toko kami</span></h2>
+                        <h2 class="mt-4 mb-4 ind">Manfaat Belanja <span> di toko kami</span></h2>
+                        <h2 class="mt-4 mb-4 eng">Benefits of Shopping <span> in our store</span></h2>
                     </div>
                 </div>
                 <div class="row mt-5 mb-5">
@@ -459,7 +509,8 @@
                         <div class="card" style="width: 18rem; box-shadow: 5px 5px 20px black">
                             <img src="img/money.png" class="card-img-top p-5" alt="..." />
                             <div class="card-body text-center py-4">
-                                <p class="card-text">Mendapat barang berkualitas dengan harga murah</p>
+                                <p class="card-text fs-5 ind">Mendapat barang berkualitas dengan harga murah</p>
+                                <p class="card-text fs-5 eng">Get quality goods at low prices</p>
                             </div>
                         </div>
                     </div>
@@ -467,7 +518,8 @@
                         <div class="card" style="width: 18rem; box-shadow: 5px 5px 20px black">
                             <img src="img/farmer.png" class="card-img-top p-5" alt="..." />
                             <div class="card-body text-center py-4">
-                                <p class="card-text">Mendukung para petani dalam negri</p>
+                                <p class="card-text fs-5 ind">Mendukung para petani dalam negri</p>
+                                <p class="card-text fs-5 eng">Supporting domestic farmers</p>
                             </div>
                         </div>
                     </div>
@@ -475,7 +527,8 @@
                         <div class="card" style="width: 18rem; box-shadow: 5px 5px 20px black">
                             <img src="img/flag.png" class="card-img-top p-5" alt="..." />
                             <div class="card-body text-center py-4">
-                                <p class="card-text">Sebagai bentuk cinta produk dalam negri</p>
+                                <p class="card-text fs-5 ind">Sebagai bentuk cinta produk dalam negri</p>
+                                <p class="card-text fs-5 eng">As a form of love for domestic products</p>
                             </div>
                         </div>
                     </div>
@@ -489,7 +542,8 @@
             <div class="container-lg">
                 <div class="row">
                     <div class="col-12 text-center mt-4 mb-5">
-                        <h2 style="color: white; font-family: 'Heavitas', sans-serif">Testimoni</h2>
+                        <h2 class="ind" style="color: white; font-family: 'Heavitas', sans-serif">Testimoni</h2>
+                        <h2 class="eng" style="color: white; font-family: 'Heavitas', sans-serif">Testimonial</h2>
                     </div>
                 </div>
                 <div class="row">
@@ -503,25 +557,30 @@
         </section>
         <!-- akhir testimoni -->
 
-        <!-- direct sell -->
+        <!-- direct buy -->
         <div class="direct">
             <div class="container-lg d-grid align-content-center justify-content-center" style="min-height: 80vh">
                 <div class="row">
-                    <div class="col-12"><h1>Udah gak usah ragu, pesan aja dulu!</h1></div>
+                    <div class="col-12 ind"><h1>Masih ragu? buktikan aja sendiri!</h1></div>
+                    <div class="col-12 eng"><h1>Still in doubt? prove it yourself!</h1></div>
                 </div>
-                <div class="row">
+                <div class="row ind">
                     <button class="btn mt-5 d-block m-auto" id="dirBtn">Pesan Sekarang!</button>
+                </div>
+                <div class="row eng">
+                    <button class="btn mt-5 d-block m-auto" id="dirBtn">Shop Now!</button>
                 </div>
             </div>
         </div>
-        <!-- akhir direct sell -->
+        <!-- akhir direct buy -->
 
         <!-- footer -->
         <footer class="position-relative">
             <div class="container-lg">
                 <div class="row">
                     <div class="col-12 mt-3">
-                        <h5 class="text-center">Ikuti Media <span>Sosial Kami</span></h5>
+                        <h5 class="text-center ind">Ikuti Media <span>Sosial Kami</span></h5>
+                        <h5 class="text-center eng">Follow Our<span> Social Media</span></h5>
                     </div>
                 </div>
                 <div class="row d-grid align-content-center text-center" id="row">
@@ -576,6 +635,139 @@
         </footer>
         <!-- akhir footer -->
         <script src="bootstrap/js/bootstrap.js"></script>
-        <script src="script.js"></script>
+        <script>
+            // // toggle class
+            // let toggle = document.querySelectorAll(".navbar-nav a");
+
+            // // loop event handling
+            // for (let i = 0; i < toggle.length; i++) {
+            //     toggle[i].addEventListener("click", () => {
+            //         // remove all class name (active)
+            //         for (let j = 0; j < toggle.length; j++) {
+            //             if (toggle[j].classList[1] == "active") {
+            //                 toggle[j].classList.remove("active");
+            //             }
+            //         }
+
+            //         // add class name (active) to current element
+            //         toggle[i].classList.add("active");
+            //     });
+            // }
+
+            const mentah = document.querySelectorAll(".katal1");
+            const kering = document.querySelectorAll(".katal2");
+            const bubuk = document.querySelectorAll(".katal3");
+
+            // default page
+            window.onload = function () {
+                const ajax = new XMLHttpRequest();
+                ajax.onreadystatechange = function () {
+                    document.querySelector(".display").innerHTML = ajax.responseText;
+                };
+                ajax.open("get", "ajax/mentah.html");
+                ajax.send();
+
+                mentah.forEach((e) => e.classList.add("aktif"));
+                kering.forEach((e) => e.classList.remove("aktif"));
+                bubuk.forEach((e) => e.classList.remove("aktif"));
+            };
+            // katalog toggle
+            document.addEventListener("click", (e) => {
+                if (
+                    e.target.parentElement.classList[0] == "katal1" ||
+                    e.target.parentElement.classList[0] == "katal2" ||
+                    e.target.parentElement.classList[0] == "katal3"
+                ) {
+                    const ajax = new XMLHttpRequest();
+                    if (e.target.parentElement.classList[0] == "katal1") {
+                        ajax.onreadystatechange = function () {
+                            document.querySelector(".display").innerHTML = ajax.responseText;
+                        };
+                        ajax.open("get", "ajax/mentah.html");
+                        ajax.send();
+
+                        mentah.forEach((e) => e.classList.add("aktif"));
+                        kering.forEach((e) => e.classList.remove("aktif"));
+                        bubuk.forEach((e) => e.classList.remove("aktif"));
+                    } else if (e.target.parentElement.classList[0] == "katal2") {
+                        ajax.onreadystatechange = function () {
+                            document.querySelector(".display").innerHTML = ajax.responseText;
+                        };
+                        ajax.open("get", "ajax/kering.html");
+                        ajax.send();
+
+                        mentah.forEach((e) => e.classList.remove("aktif"));
+                        kering.forEach((e) => e.classList.add("aktif"));
+                        bubuk.forEach((e) => e.classList.remove("aktif"));
+                    } else {
+                        ajax.onreadystatechange = function () {
+                            document.querySelector(".display").innerHTML = ajax.responseText;
+                        };
+                        ajax.open("get", "ajax/bubuk.html");
+                        ajax.send();
+
+                        mentah.forEach((e) => e.classList.remove("aktif"));
+                        kering.forEach((e) => e.classList.remove("aktif"));
+                        bubuk.forEach((e) => e.classList.add("aktif"));
+                    }
+                } else {
+                    return;
+                }
+            });
+
+            // scroll script
+
+            const tentang = document.querySelector("#tentang");
+            const katalog = document.querySelector("#katalog");
+            const testimoni = document.querySelector("#testimoni");
+            const manfaat = document.querySelector("#manfaat");
+
+            document.addEventListener("click", (e) => {
+                if (e.target.classList[0] === "katTog") {
+                    document.documentElement.scrollTop = katalog.offsetTop;
+                } else if (e.target.classList[0] === "tenTog") {
+                    document.documentElement.scrollTop = tentang.offsetTop;
+                } else if (e.target.classList[0] === "manTog") {
+                    document.documentElement.scrollTop = manfaat.offsetTop;
+                } else if (e.target.classList[0] === "tesTog") {
+                    document.documentElement.scrollTop = testimoni.offsetTop;
+                }
+            });
+
+            // script bahasa
+            const ind = Array.from(document.querySelectorAll(".ind"));
+            const eng = Array.from(document.querySelectorAll(".eng"));
+
+            const indonesia = document.getElementById("indonesia");
+            const inggris = document.getElementById("inggris");
+
+            // default language
+            ind.forEach((e) => {
+                e.style.display = "block";
+            });
+            eng.forEach((e) => {
+                e.style.display = "none";
+            });
+
+            // switch to bahasa
+            indonesia.addEventListener("click", (e) => {
+                ind.forEach((e) => {
+                    e.style.display = "block";
+                });
+                eng.forEach((e) => {
+                    e.style.display = "none";
+                });
+            });
+
+            // switch to english
+            inggris.addEventListener("click", (e) => {
+                eng.forEach((e) => {
+                    e.style.display = "block";
+                });
+                ind.forEach((e) => {
+                    e.style.display = "none";
+                });
+            });
+        </script>
     </body>
 </html>
