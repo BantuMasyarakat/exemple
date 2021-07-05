@@ -9,9 +9,8 @@
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet" />
+        <link href="http://fonts.cdnfonts.com/css/heavitas" rel="stylesheet" />
         <style>
-            @import url("http://fonts.cdnfonts.com/css/heavitas");
-
             .navbar {
                 font-family: "Heavitas", sans-serif;
             }
@@ -160,6 +159,19 @@
                 box-shadow: 0 0 20px black;
             }
 
+            .button {
+                display: none;
+                position: fixed;
+                bottom: 4rem;
+                right: 4rem;
+                z-index: 999;
+                width: 40px;
+                height: 40px;
+                background-color: rgba(0, 0, 0, 0.473);
+                border: none;
+                border-radius: 10%;
+            }
+
             #navbarDropdownMenuLink {
                 color: rgb(0, 0, 0);
             }
@@ -190,6 +202,10 @@
                 font-family: "Heavitas", sans-serif;
                 background-image: linear-gradient(to right, rgb(0, 250, 0), rgb(0, 110, 0), rgb(0, 250, 0));
                 box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.637);
+            }
+
+            #dirBtn:hover {
+                color: rgba(0, 0, 0, 0.486);
             }
 
             @media only screen and (max-width: 960px) {
@@ -277,6 +293,11 @@
 
                 footer #row {
                     height: 10vh;
+                }
+
+                .button {
+                    bottom: 2rem;
+                    right: 2rem;
                 }
 
                 #menu {
@@ -633,27 +654,18 @@
                 <p>&copy; Copyright 2021 | by Mukhamad Khusaini. All right reserved</p>
             </div>
         </footer>
+
+        <button class="button">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#ffffff" class="bi bi-caret-up-fill" viewBox="0 0 16 16">
+                <path
+                    d="m7.247 4.86-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z"
+                />
+            </svg>
+        </button>
+
         <!-- akhir footer -->
         <script src="bootstrap/js/bootstrap.js"></script>
         <script>
-            // // toggle class
-            // let toggle = document.querySelectorAll(".navbar-nav a");
-
-            // // loop event handling
-            // for (let i = 0; i < toggle.length; i++) {
-            //     toggle[i].addEventListener("click", () => {
-            //         // remove all class name (active)
-            //         for (let j = 0; j < toggle.length; j++) {
-            //             if (toggle[j].classList[1] == "active") {
-            //                 toggle[j].classList.remove("active");
-            //             }
-            //         }
-
-            //         // add class name (active) to current element
-            //         toggle[i].classList.add("active");
-            //     });
-            // }
-
             const mentah = document.querySelectorAll(".katal1");
             const kering = document.querySelectorAll(".katal2");
             const bubuk = document.querySelectorAll(".katal3");
@@ -767,6 +779,21 @@
                 ind.forEach((e) => {
                     e.style.display = "none";
                 });
+            });
+
+            // scroll top script
+            const btn = document.querySelector(".button");
+
+            window.addEventListener("scroll", () => {
+                if (window.pageYOffset >= 414) {
+                    btn.style.display = "block";
+                } else if (window.pageYOffset <= 414) {
+                    btn.style.display = "none";
+                }
+            });
+
+            btn.addEventListener("click", () => {
+                document.documentElement.scrollTop = 0;
             });
         </script>
     </body>
